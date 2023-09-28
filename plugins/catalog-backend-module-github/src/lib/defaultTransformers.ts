@@ -121,7 +121,7 @@ export const defaultOrganizationTeamTransformer: TeamTransformer =
     if (team.avatarUrl) {
       entity.spec.profile!.picture = team.avatarUrl;
     }
-    if (team.parentTeam) {
+    if (team.parentTeam?.slug) {
       entity.spec.parent = team.parentTeam.slug;
     }
 
